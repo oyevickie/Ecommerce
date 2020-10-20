@@ -1,0 +1,29 @@
+<br><br>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+                <app-notifications></app-notifications>
+                <div class="card  bg-light">
+                    <div class="card-body">
+                        <h4 class="text-center">Login</h4>
+                        <hr>
+                        <form>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" [(ngModel)]="email">
+                            </div>
+                            <div class="form-group">
+                                <label>password</label>
+                                <input [type] = "passType" name="password" class="form-control" [(ngModel)]="password">
+                            </div>
+                                <input type = "checkbox" (click)="changePasswordType()">Show Password
+                            <hr>
+                            <button type="button" class="btn btn-primary btn-block" (click)="Login()" [disabled]="btnDisabled">login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
